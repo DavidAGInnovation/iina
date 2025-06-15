@@ -363,7 +363,7 @@ struct Preference {
     }
   }
 
-  enum ArrowButtonAction: Int, InitializingFromKey {
+  enum ArrowButtonAction: Int, InitializingFromKey, CaseIterable {
     case speed = 0
     case playlist = 1
     case seek = 2
@@ -375,12 +375,12 @@ struct Preference {
     }
   }
 
-  enum Theme: Int, InitializingFromKey {
+  enum Theme: Int, InitializingFromKey, CaseIterable {
     case dark = 0
-    case ultraDark // 1
-    case light // 2
-    case mediumLight // 3
-    case system // 4
+    // case ultraDark // 1
+    case light = 2
+    // case mediumLight // 3
+    case system = 4
 
     static var defaultValue = Theme.dark
 
@@ -682,7 +682,7 @@ struct Preference {
     }
   }
 
-  enum ResizeWindowOption: Int, InitializingFromKey {
+  enum ResizeWindowOption: Int, InitializingFromKey, CaseIterable {
     case fitScreen = 0
     case videoSize05
     case videoSize10
@@ -706,7 +706,7 @@ struct Preference {
     }
   }
 
-  enum WindowBehaviorWhenPip: Int, InitializingFromKey {
+  enum WindowBehaviorWhenPip: Int, InitializingFromKey, CaseIterable {
     case doNothing = 0
     case hide
     case minimize
