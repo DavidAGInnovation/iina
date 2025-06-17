@@ -616,7 +616,7 @@ struct Preference {
     }
   }
 
-  enum HardwareDecoderOption: Int, InitializingFromKey {
+  enum HardwareDecoderOption: Int, InitializingFromKey, CaseIterable {
     case disabled = 0
     case auto
     case autoCopy
@@ -640,7 +640,7 @@ struct Preference {
     }
   }
 
-  enum ToneMappingAlgorithmOption: Int, InitializingFromKey {
+  enum ToneMappingAlgorithmOption: Int, InitializingFromKey, CaseIterable {
     case auto = 0
     case clip
     case mobius
@@ -768,7 +768,7 @@ struct Preference {
 
   }
 
-  enum ReplayGainOption: Int, InitializingFromKey {
+  enum ReplayGainOption: Int, InitializingFromKey, CaseIterable {
     case no = 0
     case track
     case album
