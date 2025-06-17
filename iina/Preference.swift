@@ -459,7 +459,7 @@ struct Preference {
     }
   }
 
-  enum IINAAutoLoadAction: Int, InitializingFromKey {
+  enum IINAAutoLoadAction: Int, InitializingFromKey, CaseIterable {
     case disabled = 0
     case mpvFuzzy
     case iina
