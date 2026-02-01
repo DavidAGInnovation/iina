@@ -405,7 +405,7 @@ struct Preference {
     }
   }
 
-  enum SeekOption: Int, InitializingFromKey {
+  enum SeekOption: Int, InitializingFromKey, CaseIterable {
     case relative = 0
     case exact
     case auto
@@ -417,7 +417,7 @@ struct Preference {
     }
   }
 
-  enum MouseClickAction: Int, InitializingFromKey {
+  enum MouseClickAction: Int, InitializingFromKey, CaseIterable {
     case none = 0
     case fullscreen
     case pause
@@ -433,12 +433,12 @@ struct Preference {
     }
   }
 
-  enum ScrollAction: Int, InitializingFromKey {
+  enum ScrollAction: Int, InitializingFromKey, CaseIterable {
     case volume = 0
-    case seek
-    case none
-    case passToMpv
-    case playbackSpeed
+    case seek = 1
+    case none = 2
+    // case passToMpv = 3
+    case playbackSpeed = 4
 
     static var defaultValue = ScrollAction.volume
 
@@ -447,7 +447,7 @@ struct Preference {
     }
   }
 
-  enum PinchAction: Int, InitializingFromKey {
+  enum PinchAction: Int, InitializingFromKey, CaseIterable {
     case windowSize = 0
     case fullscreen
     case none
@@ -566,7 +566,7 @@ struct Preference {
     }
   }
 
-  enum RTSPTransportation: Int, InitializingFromKey {
+  enum RTSPTransportation: Int, InitializingFromKey, CaseIterable {
     case lavf = 0
     case tcp
     case udp
